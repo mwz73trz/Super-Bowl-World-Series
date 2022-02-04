@@ -21,8 +21,14 @@ const fetchSuperBowls = async () => {
   return await tryCatchFetch(url);
 };
 
+const fetchSuperBowlById = async (superbowlId) => {
+  const url = `${BASE_URL}superbowls/${superbowlId}/`;
+  return await tryCatchFetch(url);
+};
+
 const myExports = {
   fetchSuperBowls,
+  fetchSuperBowlById,
 };
 
 export default myExports;

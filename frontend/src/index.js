@@ -11,6 +11,14 @@ render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="superbowls" element={<SuperBowlPage />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: "1rem" }}>
+                <p>Select a Super Bowl</p>
+              </main>
+            }
+          />
           <Route path=":superbowlId" element={<SuperBowlDetail />} />
         </Route>
         <Route path="worldseries" element={<WorldSeriesPage />} />
