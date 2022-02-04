@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import SuperBowl, WorldSeries
 
-# Register your models here.
+admin.site.register(SuperBowl)
+admin.site.register(WorldSeries)

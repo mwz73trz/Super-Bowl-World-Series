@@ -6,6 +6,7 @@ class SuperBowl(models.Model):
     win_team = models.CharField(max_length=75)
     win_score = models.IntegerField()
     lose_team = models.CharField(max_length=75)
+    lose_score = models.IntegerField()
     stadium = models.CharField(max_length=75)
     where = models.CharField(max_length=75)
     mvp = models.CharField(max_length=200)
