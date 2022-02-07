@@ -26,9 +26,22 @@ const fetchSuperBowlById = async (superbowlId) => {
   return await tryCatchFetch(url);
 };
 
+const addSuperBowl = async (superbowlObject) => {
+  const url = `${BASE_URL}superbowls/`;
+  const init = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(superbowlObject),
+  };
+  return await tryCatchFetch(url, init);
+};
+
 const myExports = {
   fetchSuperBowls,
   fetchSuperBowlById,
+  addSuperBowl,
 };
 
 export default myExports;

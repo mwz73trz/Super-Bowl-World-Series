@@ -4,6 +4,7 @@ import App from "./App";
 import SuperBowlPage from "./routes/SuperBowlPage";
 import WorldSeriesPage from "./routes/WorldSeriesPage";
 import SuperBowlDetail from "./routes/SuperBowlDetail";
+import AddSuperBowl from "./routes/AddSuperBowl";
 
 const rootElement = document.getElementById("root");
 render(
@@ -20,6 +21,7 @@ render(
             }
           />
           <Route path=":superbowlId" element={<SuperBowlDetail />} />
+          <Route path="add" element={<AddSuperBowl />} />
         </Route>
         <Route path="worldseries" element={<WorldSeriesPage />} />
         <Route

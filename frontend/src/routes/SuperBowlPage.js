@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import championAPI from "../api/championAPI";
 import SuperBowls from "../components/superbowls";
 
@@ -25,6 +25,7 @@ export default function SuperBowlPage() {
           padding: "1rem",
         }}
       >
+        <Link to="/superbowls/add">Add New Super Bowl</Link>
         <SuperBowls superbowls={superbowls} />
       </nav>
       <Outlet />
